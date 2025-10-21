@@ -5,6 +5,9 @@ Program ini dibangun menggunakan teknologi HTML5, Tailwind CSS, dan JavaScript (
 
 Struktur website ini terdiri dari empat file utama, yaitu index.html, about.html, resume.html, dan portofolio.html, serta sebuah folder image/ yang berisi file gambar seperti foto profil dan gambar karya desain maupun fotografi. Setiap halaman memiliki struktur layout yang konsisten dengan komponen navbar di bagian atas dan footer di bagian bawah, sehingga navigasi antarhalaman terasa menyatu dan mudah digunakan.
 
+berikut link youtube presentasi saya
+https://youtu.be/Zi9aXYlvOn8?si=PLLju3JLR8UmDvlA
+
 berikut hasil dari web saya
 
 ![img 1](image/hasil1.png)
