@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Portfolio Pandu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-yellow': '#ffb400',
+                        'soft-gray': '#f5f5f5',
+                        'dark-bg': '#111111',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffb400;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            bottom: -10px;
+            left: 0;
+            background-color: #ffb400;
+        }
+        .profile-img {
+            border: 8px solid #ffb400;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Navbar Fixed */
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-soft-gray">
+    <!-- Navigation -->
+    <nav class="navbar-fixed">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="text-2xl font-bold text-black">PANDU</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-black font-medium">Home</a>
+                    <a href="about.html" class="nav-link active-nav text-black font-medium">About</a>
+                    <a href="resume.html" class="nav-link text-black font-medium">Resume</a>
+                    <a href="portofolio.html" class="nav-link text-black font-medium">Portofolio</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-black focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-200">
+                <a href="index.html" class="block py-2 text-black font-medium">Home</a>
+                <a href="about.html" class="block py-2 text-black font-medium">About</a>
+                <a href="resume.html" class="block py-2 text-black font-medium">Resume</a>
+                <a href="portofolio.html" class="block py-2 text-black font-medium">Portofolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="py-16 mt-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-black text-center mb-12 section-title">ABOUT ME</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <!-- Left Column -->
+                <div class="md:w-1/3 p-4">
+                    <div class="mb-8">
+                        <div class="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 profile-img">
+                            <img src="image/profile.jpg" 
+                                 alt="Profile Photo" class="w-full h-full object-cover">
+                        </div>
+                        <div class="space-y-2">
+                            <a href="about.html" class="block text-black font-medium py-2 px-4 bg-white rounded-lg shadow-sm text-center">About Me</a>
+                            <a href="resume.html" class="block text-gray-600 font-medium py-2 px-4 bg-white rounded-lg shadow-sm text-center hover:bg-primary-yellow hover:text-black transition-all duration-300">Resume</a>
+                            <a href="portfolio.html" class="block text-gray-600 font-medium py-2 px-4 bg-white rounded-lg shadow-sm text-center hover:bg-primary-yellow hover:text-black transition-all duration-300">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="md:w-2/3 p-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+                        <h3 class="text-xl font-bold text-black mb-4">Graphic & UI/UX Designer</h3>
+                        <p class="text-gray-600 mb-6">
+                            Saya adalah mahasiswa teknik informatika dengan hasrat mendalam terhadap desain grafis dan UI/UX. 
+                            Dengan pengalaman lebih dari 2 tahun, saya telah mengerjakan berbagai proyek yang mencakup desain cetak, 
+                            desain web, dan fotografi. Keahlian saya meliputi penggunaan alat desain seperti Adobe Photoshop, Illustrator, 
+                            Figma, dan Canva.
+                        </p>
+                        <p class="text-gray-600">
+                            Selain tertarik pada desain, saya juga memiliki minat yang kuat dalam pengembangan web dan pemrograman. 
+                            Saya percaya bahwa kombinasi keterampilan desain dan teknis ini memungkinkan saya untuk menciptakan solusi digital yang 
+                            tidak hanya estetis tetapi juga fungsional dan user-friendly.
+                        </p>
+                    </div>
+                    
+                    <!-- Personal Info -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm mb-8">
+                        <h3 class="text-xl font-bold text-black mb-6">Personal Info</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <span class="font-semibold text-black w-32">Nama:</span>
+                                <span class="text-gray-600">Muhammad Pandu Tri Kurniawan</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-semibold text-black w-32">Umur:</span>
+                                <span class="text-gray-600">20 Tahun</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-semibold text-black w-32">Email:</span>
+                                <span class="text-gray-600">pandutrikurniawan05 @gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-semibold text-black w-32">Telepon:</span>
+                                <span class="text-gray-600">+62 852-3264-6152</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-semibold text-black w-32">Alamat:</span>
+                                <span class="text-gray-600">Surabaya, Indonesia</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-semibold text-black w-32">Status:</span>
+                                <span class="text-gray-600">Mahasiswa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Statistics -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm text-center card-hover">
+                            <h4 class="text-3xl font-bold text-primary-yellow mb-2">1+</h4>
+                            <p class="text-gray-600">Years Experience</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm text-center card-hover">
+                            <h4 class="text-3xl font-bold text-primary-yellow mb-2">2</h4>
+                            <p class="text-gray-600">Projects Done</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm text-center card-hover">
+                            <h4 class="text-3xl font-bold text-primary-yellow mb-2">20</h4>
+                            <p class="text-gray-600">Umur</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm text-center card-hover">
+                            <h4 class="text-3xl font-bold text-primary-yellow mb-2">235</h4>
+                            <p class="text-gray-600">Followers</p>
+                        </div>
+                    </div>
+                    
+                    <!-- What I Do -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-6">What I Do</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 border border-gray-200 rounded-2xl card-hover">
+                                <div class="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-paint-brush text-white text-xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-black mb-2">Graphic Design</h4>
+                                <p class="text-gray-600 text-sm">Membuat desain grafis kreatif untuk kebutuhan media sosial.</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-2xl card-hover">
+                                <div class="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-laptop-code text-white text-xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-black mb-2">UI Design</h4>
+                                <p class="text-gray-600 text-sm">Mendesain UI prototipe user-friendly, baik mobile maupun website.</p>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-2xl card-hover">
+                                <div class="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-camera text-white text-xl"></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-black mb-2">Photography</h4>
+                                <p class="text-gray-600 text-sm">Mengabadikan momen dan menciptakan cerita visual melalui layanan fotografi profesional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">Let's Work Together</h3>
+                    <div class="space-y-2">
+                        <p class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-envelope text-primary-yellow mr-3"></i>
+                            pandutrikurniawan05@gmail.com
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-phone text-primary-yellow mr-3"></i>
+                            +62 852-3264-6152
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4 text-center">Follow Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/muhammad-pandu-tri-k-406550348?trk=contact-info" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center transition-all duration-300 hover:bg-primary-yellow">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pndu.tri?igsh=MTA4anRjcTlldWtsag==" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center transition-all duration-300 hover:bg-primary-yellow">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© Muhammad Pandu Tri Kurniawan 2025. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Update active navigation link
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage) {
+                link.classList.add('active-nav');
+            }
+        });
+    </script>
+</body>
+</html>
